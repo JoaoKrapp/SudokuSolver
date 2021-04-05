@@ -1,0 +1,21 @@
+    Como importar o projeto:
+
+git init
+git remote add origin https://github.com/JoaoKrapp/SudokuSolver.git
+git pull origin master
+
+<------------------------------------------------------------------->
+
+    Atualizar seu projeto local: 
+
+git pull origin master
+
+<------------------------------------------------------------------->
+
+    Enviar Alterações para o servidor:
+
+git add *
+git commit -m "MENSAGEM AQUI"
+git push -u origin master
+
+<------------------------------------------------------------------->
