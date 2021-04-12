@@ -1,4 +1,5 @@
 #Created by Github.com/JoaoKrapp
+#test
 from flask import Flask, redirect, url_for, render_template, request, session, flash
 from datetime import timedelta
 from main import *
