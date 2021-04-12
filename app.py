@@ -32,7 +32,10 @@ def home():
 
 @app.route("/solved", methods=["POST", "GET"])
 def solved():
-    return render_template("solved.html")
+    if request.method == "POST":
+        return redirect(url_for("home"))
+    else:
+        return render_template("solved.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
