@@ -1,7 +1,4 @@
 #Created by Github.com/Jakker1
-def print_sudoku(sudoku):
-	for i in sudoku:
-		print(i)
 
 def null_number(sudoku):
 	"""Procura um espaço vazio e retorna
@@ -12,11 +9,18 @@ def null_number(sudoku):
 				return (r, c, True)
 	return (None, None, False)
 
+
 def verify_row(sudoku, num:int, row:int):
 	for i in range(9):
 		if sudoku[row][i] == num:
 			return False
 	return True
+
+def reset_sudoku(sudoku):
+    for r in range(len(sudoku)):
+        for c in range(len(sudoku[r])):
+            sudoku[r][c] = 0
+    return sudoku
 
 def verify_column(sudoku, num:int, column:int):
 	for i in range(9):
@@ -69,7 +73,5 @@ if __name__ == "__main__":
 	[0, 0, 0, 4, 1, 9, 0, 0, 5],
 	[0, 0, 0, 0, 8, 0, 0, 7, 9]
 	]
-	if solve_sudoku(sudoku):
-		print_sudoku(solve_sudoku(sudoku))
-	else:
-		print(f"Sem solução {solve_sudoku(sudoku)}")
+	Sudoku1 = Sudoku(sudoku)
+	print(Sudoku1)
